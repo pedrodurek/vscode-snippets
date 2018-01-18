@@ -1,5 +1,6 @@
 {
-    "React View": {
+    /* React Snippets */
+    "React - View": {
         "prefix": "jsx-view",
         "body": [
             "import React, {Component} from 'react'",
@@ -20,20 +21,17 @@
         ],
         "description": "Create a react view"
     },
-    "React View with Redux": {
+    "React - View with Redux": {
         "prefix": "jsx-reduxview",
         "body": [
             "import React, {Component} from 'react'",
             "import { connect } from 'react-redux'",
             "",
-            "Class ${1:ViewName} extends Component {",
-            "",
-            "\tcomponentDidMount() {",
-            "\t}",
+            "class ${1:ViewName} extends Component {",
             "",
             "\trender() {",
             "\t\treturn (",
-            "\t\t\t$2",
+            "\t\t\t<div>$2</div>",
             "\t\t)",
             "\t}",
             "}",
@@ -48,7 +46,7 @@
         ],
         "description": "Create a react view which supports redux"
     },
-    "React Component": {
+    "React - Component": {
         "prefix": "jsx-component",
         "body": [
             "import React from 'react'",
@@ -68,26 +66,105 @@
         ],
         "description": "Create a react component"
     },
-    "Props": {
+    "React - Component with redux form": {
+        "prefix": "jsx-compreduxform",
+        "body": [
+            "import React from 'react'",
+            "import { Field, reduxForm, Form } from 'redux-form'",
+            "import PropTypes from 'prop-types'",
+            "",
+            "const ${1:ComponentName} = ({ handleSubmit, ${2:handle} }) => (",
+            "\t<Form onSubmit={handleSubmit($2)}>",
+            "\t\t$4",
+            "\t</Form>",
+            ")",
+            "",
+            "$1.propTypes = {",
+            "}",
+            "",
+            "$1.defaultProps = {",
+            "}",
+            "",
+            "export default reduxForm({",
+            "\tform: 'initialize$1'",
+            "})($1)"
+        ],
+    },
+    "React - Props": {
         "prefix": "props",
         "body": "this.props",
         "description": "this.props"
     },
-    "State": {
+    "React - State": {
         "prefix": "state",
         "body": "this.state",
         "description": "this.state"
     },
-    "Set State Object": {
+    "React - Set State Object": {
         "prefix": "jsx-setstateobj",
         "body": "this.setState({ ${1:object} })",
         "description": "Set state with object"
     },
-    "Set State Function": {
+    "React - Set State Function": {
         "prefix": "jsx-setstatefunc",
         "body": "this.setState(({ ${1:prev} }) => {$2})",
         "description": "Set state with function"
     },
+    /* Redux Snippets */
+    "Redux - Type": {
+        "prefix": "rx-type",
+        "body": "export const ${1:typeName} = '${1:typeName}'",
+        "description": "Redux Dispatch"
+    },
+    "Redux - Action": {
+        "prefix": "rx-action",
+        "body": [
+            "const ${1:actionName} = (${2:param}) => ({",
+            "\ttype: ${3:type},",
+            "\t${2:param}",
+            "})",
+            ""
+        ],
+        "description": "Create a redux action"
+    },
+    "Redux - Reducer": {
+        "prefix": "rx-reducer",
+        "body": [
+            "const ${1:reducerName} = (state = ${2:initialState}, action) => {",
+            "\t",
+            "\tswitch (action.type) {",
+            "\t\tdefault:",
+            "\t\t\treturn state",
+            "\t}",
+            "\t",
+            "}",
+            "",
+            "export default ${1:reducerName}"
+        ]
+    },
+    "Redux - Map Dispatch": {
+        "prefix": "rx-mapdisp",
+        "body": "${1:funcName}: ($2) => dispatch(${3:action})",
+        "description": "Create function in mapDispatchToProps"
+    },
+    "Redux - Dispatch": {
+        "prefix": "disp",
+        "body": "dispatch($1)",
+        "description": "Redux Dispatch"
+    },
+    /* Redux Form */
+    "Redux - Form Field": {
+        "prefix": "rx-field",
+        "body": [
+            "<Field",
+            "\tname=\"${1:name}\"",
+            "\tcomponent=\"input\"",
+            "\ttype=\"${2:text}\"",
+            "/>"
+        ],
+        "description": "Create a Field tag for redux form"
+    },
+    /* Javascript ES6 Snippets */
     "Arrow Function": {
         "prefix": "js-arrow",
         "body": "${1:funcName} = (${2}) => {$3}",
@@ -126,5 +203,20 @@
             "const { ${1:item} } = ${2:object}"
         ],
         "description": "Destructing object syntax"
-    }
+    },
+    "Promisse - Then, Catch": {
+        "prefix": "js-prothen",
+        "body": [
+            "${1:obj}.then((${2:value}) => {",
+            "\t$3",
+            "}).catch(() => {})"
+        ],
+        "description": "Promisse - then, catch structure"
+    },
+    /* Javascript ES5 Snippets */
+	"Old JS Function": {
+		"prefix": "ojs-func",
+		"body": "function ${1:funcName}($2) {$3}",
+		"description": "Create a function (ES5)"
+	}
 }
