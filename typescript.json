@@ -1,0 +1,20 @@
+{
+    "Public Function": {
+        "prefix": "ts-func-public",
+        "body": [
+            "public ${1:funcName}(${2}) {",
+            "\t$3",
+            "}"
+        ],
+        "description": "Create a public function"
+    },
+    "Private Function": {
+        "prefix": "ts-func-private",
+        "body": [
+            "private ${1:funcName}(${2}) {",
+            "\t$3",
+            "}"
+        ],
+        "description": "Create a private function"
+    }
+}
