@@ -1,0 +1,130 @@
+{
+    "React View": {
+        "prefix": "jsx-view",
+        "body": [
+            "import React, {Component} from 'react'",
+            "",
+            "Class ${1:ViewName} extends Component {",
+            "",
+            "\tcomponentDidMount() {",
+            "\t}",
+            "",
+            "\trender() {",
+            "\t\treturn (",
+            "\t\t\t$2",
+            "\t\t)",
+            "\t}",
+            "}",
+            "",
+            "export default ${1:ViewName}"
+        ],
+        "description": "Create a react view"
+    },
+    "React View with Redux": {
+        "prefix": "jsx-reduxview",
+        "body": [
+            "import React, {Component} from 'react'",
+            "import { connect } from 'react-redux'",
+            "",
+            "Class ${1:ViewName} extends Component {",
+            "",
+            "\tcomponentDidMount() {",
+            "\t}",
+            "",
+            "\trender() {",
+            "\t\treturn (",
+            "\t\t\t$2",
+            "\t\t)",
+            "\t}",
+            "}",
+            "",
+            "const mapStateToProps = (state) => ({",
+            "})",
+            "",
+            "const mapDispatchToProps = (dispatch) => ({",
+            "})",
+            "",
+            "export default connect(mapStateToProps, mapDispatchToProps)(${1:ViewName})"
+        ],
+        "description": "Create a react view which supports redux"
+    },
+    "React Component": {
+        "prefix": "jsx-component",
+        "body": [
+            "import React from 'react'",
+            "import PropTypes from 'prop-types'",
+            "",
+            "const ${1:ComponentName} = ({ ${2:props} }) => (",
+            "\t$3",
+            ")",
+            "",
+            "${1:ComponentName}.propTypes = {",
+            "}",
+            "",
+            "${1:ComponentName}.defaultProps = {",
+            "}",
+            "",
+            "export default ${1:ComponentName}"
+        ],
+        "description": "Create a react component"
+    },
+    "Props": {
+        "prefix": "props",
+        "body": "this.props",
+        "description": "this.props"
+    },
+    "State": {
+        "prefix": "state",
+        "body": "this.state",
+        "description": "this.state"
+    },
+    "Set State Object": {
+        "prefix": "jsx-setstateobj",
+        "body": "this.setState({ ${1:object} })",
+        "description": "Set state with object"
+    },
+    "Set State Function": {
+        "prefix": "jsx-setstatefunc",
+        "body": "this.setState(({ ${1:prev} }) => {$2})",
+        "description": "Set state with function"
+    },
+    "Arrow Function": {
+        "prefix": "js-arrow",
+        "body": "${1:funcName} = (${2}) => {$3}",
+        "description": "Create an arrow function"
+    },
+    "Arrow Function Const": {
+        "prefix": "js-arrowconst",
+        "body": "const ${1:funcName} = (${2}) => {$3}",
+        "description": "Create an immutable arrow function"
+    },
+    "Import Module (all)": {
+        "prefix": "js-importall",
+        "body": "import ${1:module} from '${2:pathModule}'",
+        "description": "Import all content of a module"
+    },
+    "Import Module (single)": {
+        "prefix": "js-importsingle",
+        "body": "import { ${1:module} } from '${2:pathModule}'",
+        "description": "Import a single member of a module"
+    },
+    "Map - Funcional Programming": {
+        "prefix": "js-map",
+        "body": [
+            "${1:array}.map((${2:item}) => $3)"
+        ],
+        "description": "Create a map functional programming"
+    },
+    "Filter - Funcional Programming": {
+        "prefix": "js-filter",
+        "body": "${1:array}.filter((${2:item}) => $3)",
+        "description": "Create a filter functional programming"
+    },
+    "Destruct Object": {
+        "prefix": "js-descobj",
+        "body": [
+            "const { ${1:item} } = ${2:object}"
+        ],
+        "description": "Destructing object syntax"
+    }
+}
