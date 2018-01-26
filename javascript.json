@@ -110,6 +110,11 @@
         "body": "this.setState(({ ${1:prev} }) => {$2})",
         "description": "Set state with function"
     },
+    "React - Create a route": {
+        "prefix": "jsx-route",
+        "body": "<Route path=\"${1:url}\" component={${2:component}} />",
+        "description": "Create a tag route"
+    },
     /* Redux Snippets */
     "Redux - Type": {
         "prefix": "rx-type",
@@ -147,6 +152,19 @@
         "body": "${1:funcName}: ($2) => dispatch(${3:action})",
         "description": "Create function in mapDispatchToProps"
     },
+    "Redux - Action fetch": {
+        "prefix": "rx-fetchaction",
+        "body": [
+            "export const ${1:funcName} = ($2) => (dispatch) => {",
+            "",
+            "\t${3:method}.then(($4) => {",
+            "\t\t$0",
+            "\t}).catch(() => {})",
+            "",
+            "}",
+            ""
+        ]
+    },
     "Redux - Dispatch": {
         "prefix": "disp",
         "body": "dispatch($1)",
@@ -176,12 +194,12 @@
         "description": "Create an immutable arrow function"
     },
     "Import Module (all)": {
-        "prefix": "js-importall",
+        "prefix": "importall",
         "body": "import ${1:module} from '${2:pathModule}'",
         "description": "Import all content of a module"
     },
     "Import Module (single)": {
-        "prefix": "js-importsingle",
+        "prefix": "importsingle",
         "body": "import { ${1:module} } from '${2:pathModule}'",
         "description": "Import a single member of a module"
     },
@@ -218,5 +236,11 @@
 		"prefix": "ojs-func",
 		"body": "function ${1:funcName}($2) {$3}",
 		"description": "Create a function (ES5)"
-	}
+    },
+    /* Javascript ES5, ES6 Snippets */
+    "Console": {
+        "prefix": "con",
+        "body": "console.log($1)$0",
+        "description": "Create a function (ES5)"
+    }
 }
