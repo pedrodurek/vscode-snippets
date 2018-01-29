@@ -115,7 +115,6 @@
         "body": "<Route path=\"${1:url}\" component={${2:component}} />",
         "description": "Create a tag route"
     },
-<<<<<<< HEAD:snippets/javascript.json
     "React - PropTypes - Array": {
         "prefix": "parray",
         "body": "${1:propName}: PropTypes.array${2:.isRequired}$0",
@@ -151,8 +150,6 @@
         "body": "children: PropTypes.node${1:.isRequired}$0",
         "description": "Create a node proptype"
     },
-=======
->>>>>>> 21b81f052839c1cb3a731a6c696d5534a59ed33f:javascript.json
     /* Redux Snippets */
     "Redux - Type": {
         "prefix": "rx-type",
@@ -233,20 +230,12 @@
     },
     "Import Module (all)": {
         "prefix": "importall",
-<<<<<<< HEAD:snippets/javascript.json
         "body": "import ${2:module} from '${1:pathModule}'$0",
-=======
-        "body": "import ${1:module} from '${2:pathModule}'",
->>>>>>> 21b81f052839c1cb3a731a6c696d5534a59ed33f:javascript.json
         "description": "Import all content of a module"
     },
     "Import Module (single)": {
         "prefix": "importsingle",
-<<<<<<< HEAD:snippets/javascript.json
         "body": "import { ${2:module} } from '${1:pathModule}'$0",
-=======
-        "body": "import { ${1:module} } from '${2:pathModule}'",
->>>>>>> 21b81f052839c1cb3a731a6c696d5534a59ed33f:javascript.json
         "description": "Import a single member of a module"
     },
     "Map - Funcional Programming": {
@@ -283,17 +272,10 @@
         "description": "Create a template literal with a placeholder"
     },
     /* Javascript ES5 Snippets */
-<<<<<<< HEAD:snippets/javascript.json
     "Old JS Function": {
         "prefix": "ojs-func",
         "body": "function ${1:funcName}($2) {$3}",
         "description": "Create a function (ES5)"
-=======
-	"Old JS Function": {
-		"prefix": "ojs-func",
-		"body": "function ${1:funcName}($2) {$3}",
-		"description": "Create a function (ES5)"
->>>>>>> 21b81f052839c1cb3a731a6c696d5534a59ed33f:javascript.json
     },
     /* Javascript ES5, ES6 Snippets */
     "Console": {
