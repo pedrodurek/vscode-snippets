@@ -1,0 +1,67 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+    {
+        "key": "ctrl+l",
+        "command": "expandLineSelection",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+i",
+        "command": "-expandLineSelection",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+'",
+        "command": "workbench.action.terminal.toggleTerminal"
+    },
+    {
+        "key": "ctrl+shift+[BracketLeft]",
+        "command": "-workbench.action.terminal.toggleTerminal"
+    },
+    {
+        "key": "ctrl+shift+d",
+        "command": "editor.action.copyLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+alt+down",
+        "command": "-editor.action.copyLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+right",
+        "command": "editor.emmet.action.nextEditPoint"
+    },
+    {
+        "key": "alt+left",
+        "command": "editor.emmet.action.prevEditPoint"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "editor.emmet.action.splitJoinTag"
+    },
+    {
+        "key": "shift+'",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus",
+        "args": {
+            "snippet": "\"$1\""
+        }
+    },
+    {
+        "key": "'",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus",
+        "args": {
+            "snippet": "'$1'"
+        }
+    },
+    {
+        "key": "shift+,",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus",
+        "args": {
+            "snippet": "<$1>$0</$1>"
+        }
+    }
+]
