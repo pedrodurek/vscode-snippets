@@ -3,12 +3,9 @@
     "React - View": {
         "prefix": "jsx-view",
         "body": [
-            "import React, {Component} from 'react'",
+            "import React, { Component } from 'react'",
             "",
-            "Class ${1:ViewName} extends Component {",
-            "",
-            "\tcomponentDidMount() {",
-            "\t}",
+            "class ${1:ViewName} extends Component {",
             "",
             "\trender() {",
             "\t\treturn (",
@@ -24,8 +21,7 @@
     "React - View with Redux": {
         "prefix": "jsx-reduxview",
         "body": [
-            "import React, {Component} from 'react'",
-            "import { connect } from 'react-redux'",
+            "import React, { Component } from 'react'",
             "",
             "class ${1:ViewName} extends Component {",
             "",
@@ -89,6 +85,12 @@
             "\tform: 'initialize$1'",
             "})($1)"
         ],
+        "description": "Create a redux form view"
+    },
+    "React - componentDidMount": {
+        "prefix": "jsx-mount",
+        "body": "componentDidMount() {$0}",
+        "description": "Create a componentDidMount lifecyle method"
     },
     "React - Props": {
         "prefix": "props",
@@ -205,7 +207,7 @@
         "body": "dispatch($1)",
         "description": "Redux Dispatch"
     },
-    /* Redux Form */
+    /* Redux Form Snippets */
     "Redux - Form Field": {
         "prefix": "rx-field",
         "body": [
@@ -216,6 +218,96 @@
             "/>"
         ],
         "description": "Create a Field tag for redux form"
+    },
+    /* React Native Snippets */
+    "React Native - View Component": {
+        "prefix": "view",
+        "body": "<View>$0</View>",
+        "description": "Create a View component"
+    },
+    "React Native - Text Component": {
+        "prefix": "text",
+        "body": "<Text>$0</Text>",
+        "description": "Create a Text component"
+    },
+    "React Native - Button Component": {
+        "prefix": "button",
+        "body": "<TouchableOpacity onPress={$1}>$0</TouchableOpacity>",
+        "description": "Create a Text component"
+    },
+    "React Native - TextInput Component": {
+        "prefix": "input",
+        "body": "<TextInput value={$1} />",
+        "description": "Create a TextInput component"
+    },
+    "React Native - FlatList Component": {
+        "prefix": "flist",
+        "body": "<FlatList data={$1} renderItem={$2} keyExtractor={$3} />$0",
+        "description": "Create a FlatList component"
+    },
+    "React Native - View": {
+        "prefix": "rn-view",
+        "body": [
+            "import React, {Component} from 'react'",
+            "import { View, Text } from 'react-native'",
+            "",
+            "class ${1:viewName} extends Component {",
+            "\trender() {",
+            "\t\treturn (",
+            "\t\t\t<View>$0</View>",
+            "\t\t)",
+            "\t}",
+            "}",
+            "",
+            "export default ${1:viewName}"
+        ],
+        "description": "Create a view for React Native"
+    },
+    "React Native - Redux View": {
+        "prefix": "rn-reduxview",
+        "body": [
+            "import React, {Component} from 'react'",
+            "import { View, Text } from 'react-native'",
+            "import { connect } from 'react-redux'",
+            "",
+            "class ${1:viewName} extends Component {",
+            "\trender() {",
+            "\t\treturn (",
+            "\t\t\t<View>$0</View>",
+            "\t\t)",
+            "\t}",
+            "}",
+            "",
+            "const mapStateToProps = (state) => ({",
+            "})",
+            "",
+            "const mapDispatchToProps = (dispatch) => ({",
+            "})",
+            "",
+            "export default connect(mapStateToProps, mapDispatchToProps)(${1:ViewName})"
+        ],
+        "description": "Create a view for React Native using Redux"
+    },
+    "React Native - Component": {
+        "prefix": "rn-component",
+        "body": [
+            "import React from 'react'",
+            "import { View, Text } from 'react-native'",
+            "import PropTypes from 'prop-types'",
+            "",
+            "const ${1:ComponentName} = ({ ${2:props} }) => (",
+            "\t<View>$0</View>",
+            ")",
+            "",
+            "${1:ComponentName}.propTypes = {",
+            "}",
+            "",
+            "${1:ComponentName}.defaultProps = {",
+            "}",
+            "",
+            "export default ${1:ComponentName}"
+        ],
+        "description": "Create a component for React Native"
     },
     /* Javascript ES6 Snippets */
     "Arrow Function": {
@@ -230,7 +322,7 @@
     },
     "Import Module (all)": {
         "prefix": "importall",
-        "body": "import ${2:module} from '${1:pathModule}'$0",
+        "body": "import ${1:module} from '${2:pathModule}/${1:module}'$0",
         "description": "Import all content of a module"
     },
     "Import Module (single)": {
