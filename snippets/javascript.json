@@ -363,11 +363,6 @@
         "body": "`$1${$2}$0`",
         "description": "Create a template literal with a placeholder"
     },
-    "Log": {
-        "prefix": "log",
-        "body": "console.log($1)$0",
-        "description": "console.log"
-    },
     /* Javascript ES5 Snippets */
     "Old JS Function": {
         "prefix": "ojs-func",
